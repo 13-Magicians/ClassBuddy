@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
+// import 'dart:async';
 import 'package:device_preview/device_preview.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class ClassBuddy extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Class Buddy',
       theme: ThemeData.light(),
-      home:const CBSplashScr(),
+      home: const CBSplashScr(),
     );
   }
 }
@@ -32,7 +32,6 @@ class CBHomeScr extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Class Buddy'),
@@ -44,15 +43,12 @@ class CBHomeScr extends StatelessWidget {
         actions: const [
           IconButton(onPressed: null, icon: Icon(Icons.notifications)),
           IconButton(onPressed: null, icon: Icon(Icons.account_circle))
-
         ],
         elevation: 4.0,
       ),
       body: Container(
         color: Colors.cyan,
-
       ),
-
     );
   }
 }
@@ -67,15 +63,15 @@ class CBSplashScr extends StatelessWidget {
     //       builder: (BuildContext context) => const CBHomeScr(),
     //   ));
     // });
-    return Scaffold(
-      body: Container(
-        
-
-        color: Colors.brown,
-
-      ),
-
-    );
+    return const Scaffold(
+        body: Column(
+      children: [
+        Text(
+          'First Text',
+          style: TextStyle(fontFamily: 'K2D-Medium'),
+        )
+      ],
+    ));
   }
 }
 
